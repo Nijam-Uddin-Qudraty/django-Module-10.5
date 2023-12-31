@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p>{{ li | join:" - " }}</p>
+        <p>{{ birthday | date:"D d M Y" }}</p>
+        <p>{{ birthday|date:"SHORT_DATE_FORMAT" }}</p>
+        <p>{{ str|default_if_none:""|default:"This is a default value" }}</p>
+        {% comment %} {% for x in number %}
+        <p>{{x | add: 10}}</p>
+        {% endfor %} {% endcomment %}
+        <p>{{string | capfirst}}</p>
+        {% comment %}
+        <p>{{string| cut: "p"}}</p>
+        {% endcomment %}
+        <p>{{ o | dictsort:"name" }}</p>
+        <p>{{li | first}}</p>
+        <p>{{li | last}}</p>
+        <p>{{li | length}}</p>
+        <p>{{mltstr | linenumbers}}</p>
+        <p>{{string| lower}}</p>
+        <p>{{string| upper}}</p>
+        <p>{{string| title}}</p>
+        <p>{{li| random}}</p>
+        
+        {% comment %} <p>{{li| slice: "2"}}</p> {% endcomment %}
+ 
+        {% comment %} <p>{{birthday| time: "H:i"}}</p> {% endcomment %}
+        {% comment %} <p>{{2023-01-02T9:30:00.000123 | timesince}}</p> {% endcomment %}
+        <p>{{string | truncatechars:5}}</p>
+        <p>{{string | truncatewords:2}}</p>
+        <p>{{string | wordcount}}</p>
+        <p>{{"Python" | make_list}}</p>
+        <p>{{li | unordered_list}}</p>
+    </body>
+</html>
